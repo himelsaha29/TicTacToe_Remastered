@@ -209,6 +209,7 @@ function love.update(dt)
                     initializeGame()
                     player2Score = 0
                     player1Score = 0
+                    waitingForInput = false
                     continuation = ""
                 end
 
