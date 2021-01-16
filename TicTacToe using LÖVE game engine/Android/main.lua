@@ -2431,4 +2431,16 @@ sounds = {
     bg_image = love.graphics.newImage("img/background.png")
 
     initializeGame()
-end  
+end
+
+function love.focus(f)
+    if f then
+        -- DO NOTHING
+    else
+        home = true
+        player1Selected = false
+        player2Selected = false
+        inst = false   
+    end    
+      
+end
