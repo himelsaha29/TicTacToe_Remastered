@@ -9,6 +9,7 @@
 -- resolution, instead of however large the window is.
 -- https://github.com/Ulydev/push
 push = require 'push'
+tick = require 'tick'
 
 -- the "Class" library facilitates representation of anything in
 -- the game as code, rather than keeping track of many disparate variables and
@@ -73,11 +74,12 @@ cursorPointsGS = {
 
 function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
+    tick.framerate = 20
 
     game = {}
 	game.screen_width = VIRTUAL_WIDTH
     game.screen_height = VIRTUAL_HEIGHT
-    love.window.setMode(game.screen_width, game.screen_width, {resizable=true})
+    love.window.setMode(game.screen_width, game.screen_width, {resizable=true}, {vsync=true})
 
     --[[push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, VIRTUAL_WIDTH, VIRTUAL_HEIGHT, {
         fullscreen = false,
@@ -1173,6 +1175,7 @@ function love.draw()
         love.graphics.setFont(fonts['scoreBoardFont'])
         love.graphics.printf(title2, 295, VIRTUAL_WIDTH / 4 - 67 - 30, VIRTUAL_HEIGHT - 32)
 
+        love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 
     elseif inst then
 
@@ -1189,6 +1192,7 @@ function love.draw()
         home1:render()
         home2:render()
         home2:buttonText()
+        love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 
     -- while on gameplay screen
     elseif player2Selected then -----------------------------------------------------------------------
@@ -1284,6 +1288,7 @@ function love.draw()
         love.graphics.setFont(fonts['enterFont'])
         love.graphics.printf(string.format("%s",serve), 40, VIRTUAL_HEIGHT - 160, VIRTUAL_WIDTH)
 
+        love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 
     elseif player1Selected then -------------------------------------------------------------------------
         buttonInside1:render()
@@ -1292,6 +1297,8 @@ function love.draw()
         home1:render()
         home2:render()
         home2:buttonText()
+
+        love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
 
         love.graphics.setColor(0, 0, 205 / 255)
         love.graphics.setFont(fonts['titleFont'])

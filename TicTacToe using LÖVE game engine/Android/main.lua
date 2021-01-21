@@ -2440,7 +2440,7 @@ function love.focus(f)
         home = true
         player1Selected = false
         player2Selected = false
-        inst = false   
+        inst = false  
     end    
       
 end

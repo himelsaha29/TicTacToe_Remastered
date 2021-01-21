@@ -4,4 +4,5 @@ function love.conf(t)
     t.window.height = 540
     t.window.icon = "img/icon.png"
     t.audio.mic = false
+    t.window.vsync = 1
 end
