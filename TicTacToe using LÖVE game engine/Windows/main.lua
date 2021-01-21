@@ -1150,12 +1150,10 @@ function love.draw()
 
     -- while on startup screen
     if home then
-        --love.graphics.setBackgroundColor(255 / 255, 127 / 255, 80 / 255, 0 / 255)
 
         love.graphics.setColor(1,1,1,1)
         --draw the background image
         love.graphics.draw(bg_image)
-        --anything else to be draw on top comes after this
 
         buttonLayer1:render()
         buttonLayer2:render()
@@ -1181,7 +1179,6 @@ function love.draw()
         love.graphics.setColor(1,1,1,1)
         --draw the background image
         love.graphics.draw(bg_image)
-        --anything else to be draw on top comes after this
 
         love.graphics.setColor(0, 0, 205 / 255)
         love.graphics.setFont(fonts['instFont'])
@@ -1286,9 +1283,6 @@ function love.draw()
 
         love.graphics.setFont(fonts['enterFont'])
         love.graphics.printf(string.format("%s",serve), 40, VIRTUAL_HEIGHT - 160, VIRTUAL_WIDTH)
-
-        -- for debugging, remove
-        -- love.graphics.printf(num, 60, VIRTUAL_HEIGHT - 160, VIRTUAL_WIDTH)
 
 
     elseif player1Selected then -------------------------------------------------------------------------
@@ -1636,10 +1630,6 @@ end
 
 
 function aiMove()
-    -- put sand clock
-
-    -- first move
-    --if moveCounter == 0 then
     
         list = {0, 2, 4, 6, 8}
         x = love.math.random(5)
@@ -1691,15 +1681,6 @@ function aiMove()
             inputFailed = true
 
         end
-
-
-
-    --end    
-
-
-    
-
-    -----------------------------
 
 end    
 
@@ -1925,6 +1906,7 @@ function twoCase()
     end    
 
 end    
+
 -------------------------------
 
 function win()
@@ -2244,7 +2226,7 @@ function newAnimation(image, width, height, duration)
 end
 
 function reset()
--------------------------------------------------------------
+
 WINDOW_WIDTH = 960
 WINDOW_HEIGHT = 540
 
@@ -2292,6 +2274,8 @@ cursorPointsGS = {
 }
 
 
+-- This block makes UI slow
+--------------------------------------------------------------
 -- fonts table
 --[[fonts = {
     ['titleFont'] = love.graphics.newFont("fonts/AlloyInk.ttf", 44),
