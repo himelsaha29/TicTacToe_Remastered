@@ -9,6 +9,7 @@
 -- resolution, instead of however large the window is.
 -- https://github.com/Ulydev/push
 push = require 'push'
+tick = require 'tick'
 
 -- the "Class" library facilitates representation of anything in
 -- the game as code, rather than keeping track of many disparate variables and
@@ -74,6 +75,7 @@ cursorPointsGS = {
 
 function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
+    tick.framerate = 20
 
     --game = {}
 	--game.screen_width = VIRTUAL_WIDTH
