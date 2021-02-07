@@ -76,16 +76,16 @@ function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
     tick.framerate = 20
 
-    game = {}
+    --[[game = {}
 	game.screen_width = VIRTUAL_WIDTH
     game.screen_height = VIRTUAL_HEIGHT
-    love.window.setMode(game.screen_width, game.screen_width, {resizable=true}, {vsync=true})
+    love.window.setMode(game.screen_width, game.screen_width, {resizable=true}, {vsync=true})]]
 
-    --[[push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, VIRTUAL_WIDTH, VIRTUAL_HEIGHT, {
+    push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, VIRTUAL_WIDTH, VIRTUAL_HEIGHT, {
         fullscreen = false,
         resizable = false,
         vsync = true
-    })]]
+    })
 
     -- fonts table
 fonts = {
@@ -150,13 +150,13 @@ function love.update(dt)
     if home then                         -- while on start screen
         love.audio.stop()
         temp = 0
-        local x = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local y = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+        local x = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local y = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
         -- when left clicked on the button, proceed to gameplay
         if love.mouse.isDown('1') then
-            a = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-            b = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+            a = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+            b = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
             -- if mouse coordinates are within the button vertices (2 players option)
             if a >= ((VIRTUAL_WIDTH + 250) / 2 - 100) and a <= ((VIRTUAL_WIDTH + 250) / 2 + 100)
@@ -192,8 +192,8 @@ function love.update(dt)
             end
         end
 
-        local soundSX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local soundSY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+        local soundSX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundSY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
         -- 2 player button
         -- show mouse cursor hovering effect and play corresponding sound effect
@@ -284,14 +284,14 @@ function love.update(dt)
         instruction2 = "Crosses(X) or noughts(O) need to align horizontally/vertically/diagonally"
         instruction3 = "Get to 5 points first to be elected as the\nwinner of the round"
 
-        local bX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local bY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
-        local soundGX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local soundGY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+        local bX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local bY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
         if love.mouse.isDown('1') then
-            local a = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-            local b = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+            local a = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+            local b = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
             if a >= ((2 * VIRTUAL_WIDTH - 242) / 2 - 40) and a <= ((2 * VIRTUAL_WIDTH - 242) / 2 + 40) and
                     b >= ((VIRTUAL_HEIGHT / 4 - 15) / 2 - 9) and b <= ((VIRTUAL_HEIGHT / 4 - 15) / 2 + 17) then
@@ -342,11 +342,11 @@ function love.update(dt)
         end
 
         -- restart button function, scaled to fit phone display dimensions
-        local bX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
+        local bX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
         
-        local bY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
-        local soundGX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local soundGY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+        local bY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
         -- restart button aesthetics
         -- if mouse coordinates are within the button vertices
@@ -413,15 +413,15 @@ function love.update(dt)
         -- buffer to avoid multiple mouse click registration
         if temp <= 5 then
             if love.mouse.isDown('1') then
-                bufferX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-                bufferY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+                bufferX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+                bufferY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
             end
             temp = temp + 1
         else
 
             if love.mouse.isDown('1') then
-                xPos = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())  -- scaling to fit phone display dimensions
-                yPos = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+                xPos = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())  -- scaling to fit phone display dimensions
+                yPos = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
                 love.audio.setVolume(1)
                 sounds['click']:play()
                 serve = ""
@@ -752,11 +752,11 @@ function love.update(dt)
         end
 
         -- restart button function, scaled to fit phone display dimensions
-        local bX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
+        local bX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
         
-        local bY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
-        local soundGX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-        local soundGY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+        local bY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+        local soundGY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
 
         -- restart button aesthetics
         -- if mouse coordinates are within the button vertices
@@ -823,15 +823,15 @@ function love.update(dt)
         -- buffer to avoid multiple mouse click registration
         if temp <= 5 then
             if love.mouse.isDown('1') then
-                bufferX = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())
-                bufferY = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+                bufferX = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())
+                bufferY = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
             end
             temp = temp + 1
         else
 
             if love.mouse.isDown('1') then
-                xPos = love.mouse.getX() * (game.screen_width / love.graphics.getWidth())  -- scaling to fit phone display dimensions
-                yPos = love.mouse.getY() * (game.screen_width / love.graphics.getWidth())
+                xPos = love.mouse.getX() * (VIRTUAL_WIDTH / love.graphics.getWidth())  -- scaling to fit phone display dimensions
+                yPos = love.mouse.getY() * (VIRTUAL_WIDTH / love.graphics.getWidth())
                 love.audio.setVolume(1)
                 sounds['click']:play()
                 serve = ""
@@ -1148,7 +1148,7 @@ function love.draw()
     love.graphics.push()
 
     -- scale horizontally
-    love.graphics.scale(love.graphics.getWidth() / (game.screen_width))
+    love.graphics.scale(love.graphics.getWidth() / (VIRTUAL_WIDTH))
 
     -- while on startup screen
     if home then
