@@ -1,0 +1,4 @@
+#Thu Jan 28 10:53:53 EST 2021
+base.0=C\:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\dex\\normalRelease\\mergeDexNormalRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

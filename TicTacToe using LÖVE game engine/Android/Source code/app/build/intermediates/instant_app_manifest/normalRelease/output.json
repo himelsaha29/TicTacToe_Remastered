@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.himel.tictactoer",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "INSTANT_APP_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 32,
+        "versionName": "11.5b",
+        "outputFile": "app-normal-release-unsigned.apk",
+        "fullName": "normalRelease",
+        "baseName": "normal-release",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.himel.tictactoer",
+        "split": "",
+        "minSdkVersion": "14"
+      }
+    }
+  ]
+}

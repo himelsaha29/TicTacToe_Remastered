@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.himel.tictactoer",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "PROCESSED_RES"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 32,
+        "versionName": "11.5b",
+        "outputFile": "app-normal-debug.apk",
+        "fullName": "normalDebug",
+        "baseName": "normal-debug",
+        "dirName": ""
+      },
+      "path": "resources-normalDebug.ap_",
+      "properties": {
+        "packageId": "com.himel.tictactoer",
+        "split": "",
+        "minSdkVersion": "14"
+      }
+    }
+  ]
+}

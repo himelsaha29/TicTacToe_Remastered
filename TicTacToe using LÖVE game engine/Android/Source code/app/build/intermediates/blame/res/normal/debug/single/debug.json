@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xxhdpi_lovel.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xxhdpi\\lovel.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xhdpi_love.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xhdpi\\love.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xxhdpi_love.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xxhdpi\\love.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-mdpi_love.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-mdpi\\love.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xhdpi_lovel.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xhdpi\\lovel.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-mdpi_lovel.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-mdpi\\lovel.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xxxhdpi_lovel.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xxxhdpi\\lovel.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-xxxhdpi_love.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-xxxhdpi\\love.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-hdpi_lovel.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-hdpi\\lovel.png"
+    },
+    {
+        "merged": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\build\\intermediates\\res\\merged\\normal\\debug\\drawable-hdpi_love.png.flat",
+        "source": "C:\\Users\\HimelSaha\\Documents\\LOVE2D-to-Android\\love-android\\app\\src\\main\\res\\drawable-hdpi\\love.png"
+    }
+]

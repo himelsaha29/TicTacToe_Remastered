@@ -1,0 +1,2 @@
+org/love2d/android/executable/BuildConfig.java
+ org.love2d.android.executable.BuildConfig
