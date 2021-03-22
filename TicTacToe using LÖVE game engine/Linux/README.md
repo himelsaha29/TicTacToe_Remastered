@@ -27,6 +27,22 @@
  `sudo snap install love2d`
  
  
+ ### Fedora based Linux
+ 
+ Enable snapd: 
+ 
+ `sudo dnf install snapd`
+ 
+ Restart your system, to ensure snap’s paths are updated correctly. 
+ 
+ To enable classic snap support, enter the following to create a symbolic link between `/var/lib/snapd/snap` and `/snap`: 
+ 
+ `sudo ln -s /var/lib/snapd/snap /snap`
+ 
+ Finally:
+ 
+ `sudo snap install love2d`
+ 
  
  
 ## Run game:
