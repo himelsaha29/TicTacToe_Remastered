@@ -215,6 +215,7 @@ function love.update(dt)
         end
 
         -- 1 player button
+        -- show mouse cursor hovering effect and play corresponding sound effect
         if x >= ((VIRTUAL_WIDTH - 250) / 2 - 100) and x <= ((VIRTUAL_WIDTH - 250) / 2 + 100)
                 and y >= ((VIRTUAL_HEIGHT - 30) / 2 - 15) and y <= ((VIRTUAL_HEIGHT + 30) / 2 + 15) then
             button2Layer1 = Buttons(VIRTUAL_WIDTH - 250, VIRTUAL_HEIGHT - 30, 0 / 255, 255 / 255, 127 / 255, 200, 30, 11)
@@ -232,6 +233,7 @@ function love.update(dt)
 
 
         -- instruction
+        -- show mouse cursor hovering effect and play corresponding sound effect
         if x >= ((VIRTUAL_WIDTH - 250) / 2 - 100) and x <= ((VIRTUAL_WIDTH - 250) / 2 + 100)
                 and y >= ((VIRTUAL_HEIGHT + 130) / 2 - 15) and y <= ((VIRTUAL_HEIGHT + 190) / 2 + 15) then
             inst1 = Buttons(VIRTUAL_WIDTH - 250, VIRTUAL_HEIGHT + 130, 0 / 255, 255 / 255, 127 / 255, 200, 30, 77)
@@ -249,6 +251,7 @@ function love.update(dt)
 
 
         -- quit
+        -- show mouse cursor hovering effect and play corresponding sound effect
         if x >= ((VIRTUAL_WIDTH + 250) / 2 - 100) and x <= ((VIRTUAL_WIDTH + 250) / 2 + 100)
                 and y >= ((VIRTUAL_HEIGHT + 130) / 2 - 15) and y <= ((VIRTUAL_HEIGHT + 190) / 2 + 15) then
             quit1 = Buttons(VIRTUAL_WIDTH + 250, VIRTUAL_HEIGHT + 130, 0 / 255, 255 / 255, 127 / 255, 200, 30, 87)
@@ -325,7 +328,7 @@ function love.update(dt)
             soundGX, soundGY
         }
 
-    elseif player2Selected then -----------------------------------------------------------------------
+    elseif player2Selected then               -----------------------------------------------------------------------
         sounds['background']:play()
 
 
@@ -441,7 +444,7 @@ function love.update(dt)
                         waitingForInput = false
                         continuation = ""
                         serve = ""
-                        initializeGame()            -- resetting the game
+                        initializeGame()            -- reinitializing the board
                         continueShown = false
 
                 end    
@@ -477,7 +480,7 @@ function love.update(dt)
                         val4 = 2
                     end
 
-                    cell4 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell4 = false           -- setting boolean value to false so that cell does not accept input anymore
 
                 end
 
@@ -502,7 +505,7 @@ function love.update(dt)
                         val5 = 2
                     end
 
-                    cell5 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell5 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2) + layout_column_width) and
@@ -526,7 +529,7 @@ function love.update(dt)
                         val7 = 2
                     end
 
-                    cell7 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell7 = false           -- setting boolean value to false so that cell does not accept input anymore
 
                 end
 
@@ -551,7 +554,7 @@ function love.update(dt)
                         val8 = 2
                     end
 
-                    cell8 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell8 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
 
@@ -576,7 +579,7 @@ function love.update(dt)
                         val1 = 1
                     end
 
-                    cell1 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell1 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= (VIRTUAL_WIDTH / 2 + layout_gap + (layout_column_width / 2) + layout_column_width) and
@@ -599,7 +602,7 @@ function love.update(dt)
                         val2 = 2
                     end
 
-                    cell2 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell2 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
 
@@ -621,7 +624,7 @@ function love.update(dt)
                         player1 = true
                         val3 = 2
                     end
-                    cell3 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell3 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= row_x and xPos <= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2)) and
@@ -644,7 +647,7 @@ function love.update(dt)
                         val0 = 2
                     end
 
-                    cell0 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell0 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= row_x and xPos <= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2)) and
@@ -667,7 +670,7 @@ function love.update(dt)
                         val6 = 2
                     end
 
-                    cell6 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell6 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
             end
@@ -682,7 +685,7 @@ function love.update(dt)
                 (val0 == 1 and val4 == 1 and val8 == 1) or (val0 == 2 and val4 == 2 and val8 == 2) and player1Score ~= 5
                 and player2Score ~= 5 then
 
-                -- if a player has 3 straight Xs or Os, the board does not accept further inputs
+                -- if a player has 3 straight Xs or Os, the board does not accept inputs anymore
                 cell0 = false
                 cell1 = false
                 cell2 = false
@@ -731,7 +734,7 @@ function love.update(dt)
         end
 
 
-    elseif player1Selected then -----------------------------------------------------------------------
+    elseif player1Selected then            -----------------------------------------------------------------------
         animation.currentTime = animation.currentTime + dt
         if animation.currentTime >= animation.duration then
             animation.currentTime = animation.currentTime - animation.duration
@@ -883,7 +886,7 @@ function love.update(dt)
                         val4 = 1
                     end
 
-                    cell4 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell4 = false           -- setting boolean value to false so that cell does not accept input anymore
 
                 end
 
@@ -901,7 +904,7 @@ function love.update(dt)
                         val5 = 1
                     end
 
-                    cell5 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell5 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2) + layout_column_width) and
@@ -918,7 +921,7 @@ function love.update(dt)
                         val7 = 1
                     end
 
-                    cell7 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell7 = false           -- setting boolean value to false so that cell does not accept input anymore
 
                 end
 
@@ -936,7 +939,7 @@ function love.update(dt)
                         val8 = 1
                     end
 
-                    cell8 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell8 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
 
@@ -954,7 +957,7 @@ function love.update(dt)
                         val1 = 1
                     end
 
-                    cell1 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell1 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= (VIRTUAL_WIDTH / 2 + layout_gap + (layout_column_width / 2) + layout_column_width) and
@@ -970,7 +973,7 @@ function love.update(dt)
                         val2 = 1
                     end
 
-                    cell2 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell2 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
 
@@ -985,7 +988,7 @@ function love.update(dt)
                         player2 = true
                         val3 = 1
                     end
-                    cell3 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell3 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= row_x and xPos <= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2)) and
@@ -1001,7 +1004,7 @@ function love.update(dt)
                         val0 = 1
                     end
 
-                    cell0 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell0 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
                 if (xPos >= row_x and xPos <= (VIRTUAL_WIDTH / 2 - layout_gap - (layout_column_width / 2)) and
@@ -1017,7 +1020,7 @@ function love.update(dt)
                         val6 = 1
                     end
 
-                    cell6 = false           -- setting boolean value to false so that cell does not accept anymore input
+                    cell6 = false           -- setting boolean value to false so that cell does not accept input anymore
                 end
 
             end  
@@ -1126,7 +1129,7 @@ function love.keypressed(key)
         waitingForInput = false
         continuation = ""
         serve = ""
-        initializeGame()            -- resetting the game
+        initializeGame()            -- reinitializing the board
         continueShown = false
 
     elseif (key == 'enter' or key == 'return') and (player1Score == 5 or player2Score == 5) then
@@ -1135,7 +1138,7 @@ function love.keypressed(key)
         waitingForInput = false
         continuation = ""
         serve = ""
-        initializeGame()            -- resetting the game
+        initializeGame()            -- reinitializing the board
         continueShown = false
     end
 end
@@ -1908,8 +1911,8 @@ function twoCase()
 
 end    
 
--------------------------------
 
+-- this function makes the winning move for the computer
 function win()
     if val0 == 2 and val1 == 2 and cell2 == true then
         circle2 = Circle('line', VIRTUAL_WIDTH / 2 + 146, VIRTUAL_HEIGHT / 2 - 200, 38, 255 / 255, 255 / 255, 255 / 255, 1)
@@ -2131,6 +2134,7 @@ function win()
 
 end    
 
+-- this function fills in an empty cell for computer
 function fillIn()
     if cell0 == true then
         circle0 = Circle('line', VIRTUAL_WIDTH / 2 - 146, VIRTUAL_HEIGHT / 2 - 200, 38, 255 / 255, 255 / 255, 255 / 255, 1)
@@ -2209,6 +2213,7 @@ function fillIn()
     
 end    
 
+-- this function is responsible for the animation that occurs when the computer is making a move
 function newAnimation(image, width, height, duration)
     local animation = {}
     animation.spriteSheet = image;
@@ -2226,6 +2231,7 @@ function newAnimation(image, width, height, duration)
     return animation
 end
 
+-- this function resets the game
 function reset()
 
 WINDOW_WIDTH = 960
@@ -2275,7 +2281,7 @@ cursorPointsGS = {
 }
 
 
--- This block makes UI slow
+-- This block makes UI slow, not to be loaded
 --------------------------------------------------------------
 -- fonts table
 --[[fonts = {
