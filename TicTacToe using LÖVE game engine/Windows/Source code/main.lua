@@ -106,7 +106,7 @@ sounds = {
 }
 
     -- set the title of the application window
-    love.window.setTitle('TicTacToe')
+    love.window.setTitle('TicTacToe Remastered')
     home = true
     moveCounter = 0
     inputFailed = false
@@ -2305,7 +2305,7 @@ sounds = {
 -------------------------------------------------------------
 
     -- set the title of the application window
-    love.window.setTitle('TicTacToe')
+    love.window.setTitle('TicTacToe Remastered')
     home = true
     moveCounter = 0
     inputFailed = false
